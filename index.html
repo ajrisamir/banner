@@ -1,0 +1,109 @@
+<style>
+  #instructions-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1rem;
+    z-index: 9999;
+    text-align: left;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+  }
+
+  #instructions-banner h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #00ff88;
+  }
+
+  #instructions-banner video {
+    max-width: 90%;
+    height: auto;
+    border: 2px solid #00ff88;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .instruction-block {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .instruction-block h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #00ff88;
+    font-size: 1.1rem;
+  }
+
+  .instruction-block p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+
+  #start-button {
+    margin: 2rem auto 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #00ff88;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+  }
+</style>
+
+<div id="instructions-banner">
+  <h1>Yoga & Spa by Pablo Luna in AR</h1>
+
+  <!-- Replace with your actual video source -->
+  <video autoplay loop muted playsinline>
+    <source src="your-video-url.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="instruction-block">
+    <h3>📱 Use a Compatible Device</h3>
+    <p>The experience requires a smartphone or tablet that supports WebXR, such as newer Android devices with ARCore support and Chrome browser.</p>
+
+    <h3>🌐 Open in Mobile Browser (Preferably Chrome)</h3>
+    <p>For the best experience, open the link in Google Chrome on a mobile device. Desktop browsers or unsupported browsers may not work.</p>
+
+    <h3>📷 Allow Camera Access</h3>
+    <p>When prompted, make sure to grant camera permissions so the site can access your device's camera for AR tracking.</p>
+
+    <h3>💡 Ensure a Well-Lit Environment</h3>
+    <p>Good lighting is important for proper surface and hand detection. Use this AR experience in a well-lit room with visible flat surfaces like floors or tables.</p>
+
+    <h3>📱 Move the Device Slowly</h3>
+    <p>Slowly pan the device around the environment to help detect horizontal surfaces for AR placement.</p>
+
+    <h3>🖐️ Hand Tracking Requires Visibility</h3>
+    <p>Keep your hand clearly visible in front of the camera. Avoid occlusions, low light, or placing your hand too close to the lens.</p>
+
+    <h3>📲 No Installation Needed</h3>
+    <p>This is a WebAR experience — no app download is required. Simply open the link in a browser to get started.</p>
+
+    <h3>📶 Internet Connection Required</h3>
+    <p>Ensure you have a stable internet connection, as 3D assets and AR features are loaded in real time from the web.</p>
+  </div>
+
+  <button id="start-button">Start AR</button>
+</div>
+
+<script>
+  document.getElementById('start-button').addEventListener('click', () => {
+    document.getElementById('instructions-banner').style.display = 'none';
+  });
+</script>
